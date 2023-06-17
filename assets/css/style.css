@@ -1,0 +1,106 @@
+body {
+  margin: 0%;
+}
+
+/* Se crea grid principal */
+.grid-container {
+  display: grid;
+  grid-template-areas:
+    "header header"
+    "aside main"
+    "footer footer";
+  grid-template-columns: 15% 85%;
+  height: auto;
+}
+
+/* Se da formato al header y sus elementos hijos */
+header {
+  background-color: black;
+  grid-area: header;
+  height: 4em;
+  color: white;
+  font-family: "Dancing Script", cursive;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+header h1 {
+  margin: 0%;
+}
+
+header p {
+  margin: 0%;
+  padding: 0%;
+}
+
+/* Se crea contenedor para alinear elementos */
+aside {
+  background-color: rgb(206, 245, 232);
+  grid-area: aside;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  font-family: "Dancing Script", cursive;
+  font-size: large;
+}
+
+aside p {
+  margin: 0%;
+}
+
+/* Se crea grid anidado en sección main para ordenar tarjetas de productos que son padres de elementos internos */
+main {
+  background-color: rgb(206, 245, 232);
+  grid-area: main;
+  display: grid;
+  grid-template-columns: auto auto auto;
+  row-gap: 1em;
+  column-gap: 1em;
+  justify-content: baseline;
+  padding-top: 1em;
+  padding-bottom: 1em;
+}
+
+.tarjeta_producto {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  width: 80%;
+  background-color: rgb(237, 180, 111);
+}
+
+.tarjeta_producto img {
+  height: 13.5em;
+}
+
+.producto_nombre {
+  margin: 0%;
+  padding-top: 0.4em;
+  font-weight: bolder;
+}
+
+.precio_producto {
+  margin: 0%;
+  padding: 0.3em;
+  color: darkolivegreen;
+}
+
+.compra_boton {
+  margin-top: 1.1em;
+  color: aliceblue;
+  background-color: black;
+}
+
+/* Se da propiedades al footer*/
+footer {
+  grid-area: footer;
+  height: 5.6em;
+  background-color: black;
+  color: white;
+  text-align: center;
+}
+
+footer p {
+  padding: 0%;
+}
